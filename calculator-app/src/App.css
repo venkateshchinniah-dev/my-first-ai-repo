@@ -1,0 +1,118 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.calculator {
+  background: var(--calc-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--calc-border);
+  border-radius: 24px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: var(--calc-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.display {
+  background: var(--display-bg);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.current-operand {
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background: var(--btn-bg);
+  border: 1px solid transparent;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 16px 0;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background: var(--btn-active);
+  transform: translateY(0);
+}
+
+.btn.operator {
+  background: var(--btn-operator-bg);
+  color: var(--btn-operator-text);
+}
+
+.btn.operator:hover {
+  background: var(--btn-operator-hover);
+}
+
+.btn.span-two {
+  grid-column: span 2;
+}
+
+.btn.equal {
+  background: var(--btn-equal-bg);
+  color: white;
+  font-weight: 500;
+}
+
+.btn.equal:hover {
+  background: var(--btn-equal-hover);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 8px;
+  min-height: 1rem;
+}
